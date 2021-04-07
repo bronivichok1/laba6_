@@ -64,6 +64,7 @@ public class Field extends JPanel {
     }
     // Синхронизированный метод проверки, может ли мяч двигаться
 // (не включен ли режим паузы?)
+
     public synchronized void canMove(BouncingBall ball) throws
             InterruptedException {
         if (paused) {

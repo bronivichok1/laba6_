@@ -111,4 +111,17 @@ public class BouncingBall implements Runnable {
         canvas.draw(ball);
         canvas.fill(ball);
     }
+    private boolean paused;
+    public void setPaused(){
+        paused = true;
+    }
+    public void resumePaused(){
+        paused = false;
+    }
+    public boolean isPaused() {
+        return paused;
+    }
+    public Color getColor() {
+        return color;
+    }
 }
