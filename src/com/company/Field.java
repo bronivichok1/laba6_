@@ -64,6 +64,13 @@ public class Field extends JPanel {
     }
     // Синхронизированный метод проверки, может ли мяч двигаться
 // (не включен ли режим паузы?)
+    public synchronized void pauseGreen() {
+        for (BouncingBall ball: balls) {
+            if(ball.getColor().getGreen() >= 2*(ball.getColor().getBlue() + ball.getColor().getRed())) {
+                ball.setPaused();
+            }
+        }
+    }
 
     public synchronized void canMove(BouncingBall ball) throws
             InterruptedException {
